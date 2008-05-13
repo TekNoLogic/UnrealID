@@ -1,0 +1,19 @@
+## Interface: 30303
+
+## Title: UnrealID
+## Notes: Make "real" names go away
+## Author: Tekkub Stoutwrithe
+## Version: Alpha
+## X-Website: http://tekkub.net/
+## X-Email: tekkub-wow@googlegroups.com
+
+## OptionalDeps: tekDebug, tekErr
+
+LibStub.lua
+tekKonfigAboutPanel.lua
+
+UtilityFunctions.lua
+EventDispatcher.lua
+
+names.lua
+UnrealID.lua
