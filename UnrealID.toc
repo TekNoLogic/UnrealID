@@ -17,3 +17,4 @@ EventDispatcher.lua
 
 names.lua
 UnrealID.lua
+friendlist.lua
