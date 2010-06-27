@@ -15,12 +15,20 @@ ns.names = setmetatable({}, {__index = function(t,i)
 	return i
 end})
 
-function ns.GetPresenceID(name)
+
+ns.PIDs = setmetatable({}, {__index = function(t,i)
 	local _, online = BNGetNumFriends()
 	for i=1,online do
 		local pID, givenName, surname = BNGetFriendInfo(i)
 		if (givenName.. " ".. surname) == name then
+			t[i] = pID
 			return pID
 		end
 	end
+end})
+
+
+ns:RegisterEvent("BN_DISCONNECTED")
+function ns:BN_DISCONNECTED()
+	table.wipe(ns.pIDs)
 end
