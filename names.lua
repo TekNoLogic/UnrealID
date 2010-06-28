@@ -16,11 +16,11 @@ ns.names = setmetatable({}, {__index = function(t,i)
 end})
 
 
-ns.PIDs = setmetatable({}, {__index = function(t,i)
+ns.pIDs = setmetatable({}, {__index = function(t,i)
 	local _, online = BNGetNumFriends()
-	for i=1,online do
-		local pID, givenName, surname = BNGetFriendInfo(i)
-		if (givenName.. " ".. surname) == name then
+	for j=1,online do
+		local pID, givenName, surname = BNGetFriendInfo(j)
+		if (givenName.. " ".. surname) == i then
 			t[i] = pID
 			return pID
 		end
