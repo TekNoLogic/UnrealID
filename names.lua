@@ -17,8 +17,7 @@ end})
 
 
 ns.pIDs = setmetatable({}, {__index = function(t,i)
-	local _, online = BNGetNumFriends()
-	for j=1,online do
+	for j=1,BNGetNumFriends() do
 		local pID, givenName, surname = BNGetFriendInfo(j)
 		if (givenName.. " ".. surname) == i then
 			t[i] = pID
